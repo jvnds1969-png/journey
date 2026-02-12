@@ -1,248 +1,343 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Zorgstart – Geriatrische patiëntjourney</title>
-  <link rel="stylesheet" href="zorgstart-geriatrie.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="zorgstart-geriatrie.css" />
+
+  <!-- Optional: nicer rendering on mobile -->
+  <meta name="color-scheme" content="dark" />
 </head>
+
 <body>
+  <!-- Skip link (accessibility) -->
+  <a href="#content" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;">
+    Ga naar inhoud
+  </a>
 
-<header class="hero">
-  <div class="hero-inner">
-    <div class="hero-badge">Zorgstart in geriatrie</div>
-    <h1>De reis van mevrouw Janssens</h1>
-    <p class="hero-lead">
-      Van spoedopname naar veilig thuis – met geriatrische evaluatie, zorgpaden en ontslag via Zorgstart.
-    </p>
-    <div class="hero-meta">
-      <span class="chip">Comprehensive geriatrische evaluatie</span>
-      <span class="chip chip-soft">Beddenhuis- & doorstroomjourney</span>
-    </div>
-  </div>
-  <div class="hero-gradient"></div>
-</header>
+  <header class="hero" role="banner">
+    <div class="hero-inner">
+      <div class="hero-badge">Zorgstart in geriatrie</div>
 
-<main class="page">
+      <h1>De reis van mevrouw Janssens</h1>
 
-  <!-- Legend / Rollen -->
-  <section class="roles-section">
-    <h2>Wie speelt welke rol?</h2>
-    <p class="section-intro">
-      Een multidisciplinair team bouwt, samen met de oudere en haar netwerk, aan één gedeeld zorgplan. Zorgstart maakt dat plan zichtbaar en uitvoerbaar.
-    </p>
-
-    <div class="roles-grid">
-      <article class="role-card role-arts">
-        <h3>Geriater / specialist</h3>
-        <p>Beoordeelt medische haalbaarheid, coördineert de geriatrische evaluatie en vertaalt bevindingen naar behandel- en zorgplanning. [web:56][web:61][web:83]</p>
-      </article>
-      <article class="role-card role-verpleeg">
-        <h3>Verpleegkundige</h3>
-        <p>Brengt verpleegkundige parameters en zorgbehoeften in kaart, bevraagt mantelzorg en signaleert geriatrische risico’s in Zorgstart. [web:61][web:64][web:70]</p>
-      </article>
-      <article class="role-card role-social">
-        <h3>Sociaal werker</h3>
-        <p>Regelt ondersteuning thuis, organiseert mantelzorg en bewaakt de sociale context rond de oudere. [web:61][web:64][web:79]</p>
-      </article>
-      <article class="role-card role-para">
-        <h3>Ergotherapeut & kinesist</h3>
-        <p>Testen zelfstandigheid, mobiliteit en valrisico, en bepalen welke hulpmiddelen en revalidatie nodig zijn. [web:61][web:64][web:75]</p>
-      </article>
-      <article class="role-card role-psy">
-        <h3>Psycholoog & diëtist</h3>
-        <p>Brengen mentaal welbevinden, geheugen en voeding/ondervoeding in kaart, als basis voor aangepaste zorg. [web:61][web:64][web:75]</p>
-      </article>
-      <article class="role-card role-zorgstart">
-        <h3>Zorgstart</h3>
-        <p>Digitale orkestratielaag die geriatrische domeinen, zorgpaden en ontslagplanning samenbrengt in één overzichtelijk traject. [web:56][web:61][web:80]</p>
-      </article>
-    </div>
-  </section>
-
-  <!-- Timeline -->
-  <section class="timeline-section">
-    <h2>De visuele journey</h2>
-    <p class="timeline-intro">
-      Eén verhaal, meerdere mijlpalen: van opname, over geriatrische evaluatie, naar ontslag en nazorg.
-    </p>
-
-    <div class="timeline">
-
-      <!-- Dag 1: Opname & alarmbel -->
-      <div class="timeline-item">
-        <div class="timeline-pill">
-          <span class="pill-day">Dag 1</span>
-          <span class="pill-label">Opname & early signal</span>
-        </div>
-        <div class="timeline-card">
-          <h3>Val thuis, opname via spoed</h3>
-          <p class="patient-line">
-            Mevrouw Janssens (82) valt thuis, breekt haar heup en wordt via spoed opgenomen. Ze woont alleen, heeft geheugenklachten en hulp van haar dochter op afstand. [web:61][web:79]
-          </p>
-          <div class="roles-list">
-            <div class="role-line">
-              <span class="role-tag role-verpleeg">Verpleegkundige</span>
-              <p>Registreert opname in het EPD en vult in Zorgstart een korte risico‑screening in (valrisico, geheugenproblemen, woont alleen, beperkte mantelzorg). [web:61][web:70]</p>
-            </div>
-            <div class="role-line">
-              <span class="role-tag role-arts">Geriater / specialist</span>
-              <p>Beslist om, gezien leeftijd en kwetsbaarheid, een geriatrische evaluatie te vragen en een eerste verwachte ontslagwindow te noteren. [web:56][web:61][web:83]</p>
-            </div>
-            <div class="role-line">
-              <span class="role-tag role-zorgstart">Zorgstart</span>
-              <p>Labelt de patiënte als “hoog geriatrisch & ontslagrisico” en zet haar automatisch op de radar van het geriatrisch team en sociale dienst. [web:56][web:61]</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Dag 2–3: Geriatrische evaluatie (CGA) -->
-      <div class="timeline-item">
-        <div class="timeline-pill">
-          <span class="pill-day">Dag 2–3</span>
-          <span class="pill-label">Geriatrische evaluatie (CGA)</span>
-        </div>
-        <div class="timeline-card">
-          <h3>Een compleet beeld van kwetsbaarheid</h3>
-          <p class="patient-line">
-            In het geriatrisch dagziekenhuis of op de afdeling wordt een uitgebreide geriatrische evaluatie uitgevoerd: medisch, psychisch, functioneel en sociaal. [web:56][web:61][web:79]
-          </p>
-          <div class="roles-list">
-            <div class="role-line">
-              <span class="role-tag role-verpleeg">Verpleegkundige</span>
-              <p>Neemt verpleegkundige parameters af, bevraagt mantelzorg en thuissituatie en vult geriatrische syndromen in (incontinentie, pijn, slikproblemen, vermoeidheid…). [web:61][web:70][web:79]</p>
-            </div>
-            <div class="role-line">
-              <span class="role-tag role-para">Ergotherapeut & kinesist</span>
-              <p>Testen ADL‑zelfstandigheid, mobiliteit en valrisico, en brengen valgevaar en nood aan hulpmiddelen in kaart. [web:61][web:64][web:75]</p>
-            </div>
-            <div class="role-line">
-              <span class="role-tag role-psy">Psycholoog & diëtist</span>
-              <p>Beoordelen geheugen en mentaal welbevinden, meten voedingstoestand en risico op ondervoeding of vermagering. [web:61][web:64][web:75]</p>
-            </div>
-            <div class="role-line">
-              <span class="role-tag role-social">Sociaal werker</span>
-              <p>Bekijkt sociale context, mantelzorgbelasting en beschikbaarheid van thuiszorg en vangnet. [web:61][web:64][web:79]</p>
-            </div>
-            <div class="role-line">
-              <span class="role-tag role-arts">Geriater</span>
-              <p>Integreert alle bevindingen in een samenvattend geriatrisch profiel en koppelt dit terug naar het team en de behandelende arts. [web:56][web:61][web:83]</p>
-            </div>
-            <div class="role-line">
-              <span class="role-tag role-zorgstart">Zorgstart</span>
-              <p>Verwerkt de geriatrische domeinen tot duidelijke probleemgebieden (mobiliteit, voeding, polyfarmacie, cognitie, continentiestoornissen, valrisico, mentaal welbevinden…). [web:56][web:61][web:75]</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Dag 3–4: Zorgpaden & ontslagrichting -->
-      <div class="timeline-item">
-        <div class="timeline-pill">
-          <span class="pill-day">Dag 3–4</span>
-          <span class="pill-label">Zorgpaden gekozen</span>
-        </div>
-        <div class="timeline-card">
-          <h3>Van bevindingen naar zorgpaden</h3>
-          <p class="patient-line">
-            Op basis van de geriatrische evaluatie kiest het team passende zorgpaden en wordt het traject na ontslag al uitgetekend. [web:57][web:61][web:84]
-          </p>
-          <div class="roles-list">
-            <div class="role-line">
-              <span class="role-tag role-arts">Geriater / specialist</span>
-              <p>Activeert relevante zorgpaden in Zorgstart, zoals valrisico & spierverlies, botontkalking, polyfarmacie‑opvolging, dementiezorg of voedingsondersteuning. [web:61][web:64][web:84]</p>
-            </div>
-            <div class="role-line">
-              <span class="role-tag role-zorgstart">Zorgstart</span>
-              <p>Verbindt elk zorgpad met concrete acties na ontslag: dagziekenhuis geriatrie, geheugenkliniek, hartfalenpoli, wondzorg, thuisverpleging en revalidatie. [web:57][web:61][web:62]</p>
-            </div>
-            <div class="role-line">
-              <span class="role-tag role-social">Sociaal werker</span>
-              <p>Bekijkt, samen met patiënt en mantelzorger, wat haalbaar en wenselijk is en zorgt dat noodzakelijke ondersteuning tijdig wordt opgestart. [web:61][web:62][web:79]</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Dag 4–6: Ontslagvoorbereiding -->
-      <div class="timeline-item">
-        <div class="timeline-pill">
-          <span class="pill-day">Dag 4–6</span>
-          <span class="pill-label">Ontslag als uitvoeringsmoment</span>
-        </div>
-        <div class="timeline-card">
-          <h3>Het plan wordt concreet</h3>
-          <p class="patient-line">
-            Terwijl de medische behandeling verderloopt, wordt de thuissituatie stap voor stap voorbereid. Het ontslagmoment wordt een uitvoeringsmoment, geen startschot. [web:57][web:61][web:80]
-          </p>
-          <div class="roles-list">
-            <div class="role-line">
-              <span class="role-tag role-verpleeg">Verpleegkundige</span>
-              <p>Doorloopt een vaste ontslag‑checklist in Zorgstart: wondzorg, medicatie, valpreventie, hulpmiddelen, wie te bellen bij problemen. [web:61][web:64][web:70]</p>
-            </div>
-            <div class="role-line">
-              <span class="role-tag role-social">Sociaal werker</span>
-              <p>Regelt thuiszorg, dagopvang, hulpmiddelen, vervoer, en stemt mantelzorg af; alles wordt zichtbaar in het Zorgstart‑plan. [web:61][web:62][web:79]</p>
-            </div>
-            <div class="role-line">
-              <span class="role-tag role-zorgstart">Zorgstart</span>
-              <p>Genereert een professioneel overzicht (voor huisarts, thuisverpleegkundige, paramedici) én een begrijpelijke patiëntenversie in gewone taal. [web:56][web:61][web:80]</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Ontslag & nazorg -->
-      <div class="timeline-item">
-        <div class="timeline-pill">
-          <span class="pill-day">Ontslag</span>
-          <span class="pill-label">Van bed naar zorgreis</span>
-        </div>
-        <div class="timeline-card">
-          <h3>Veilig naar huis, met een plan</h3>
-          <p class="patient-line">
-            Mevrouw Janssens verlaat het ziekenhuis niet met alleen een ontslagbrief, maar met een traject waarin geriatrische zorgpaden, thuiszorg en opvolging op elkaar afgestemd zijn. [web:57][web:61][web:83]
-          </p>
-          <div class="roles-list">
-            <div class="role-line">
-              <span class="role-tag role-para">Thuiszorg & paramedici</span>
-              <p>Starten op basis van het gedeelde plan: wondzorg, valpreventie, kinesitherapie, voedingsadvies, cognitieve ondersteuning. [web:57][web:61][web:62]</p>
-            </div>
-            <div class="role-line">
-              <span class="role-tag role-arts">Huisarts & geriatrisch dagziekenhuis</span>
-              <p>Zien welke zorgpaden lopen (bv. dementiezorg, hartfalen, kankerzorg, polyfarmacie) en nemen de medische regie na ontslag over. [web:61][web:62][web:84]</p>
-            </div>
-            <div class="role-line">
-              <span class="role-tag role-zorgstart">Zorgstart</span>
-              <p>Volgt op of zorg effectief opstart, signaleert vertragingen/no‑shows en bouwt data op over doorstroom, ligduur en heropnames bij geriatrische patiënten. [web:57][web:65][web:80]</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="cta-section">
-    <div class="cta-card">
-      <h2>Wat als elke geriatrische patiënt zo’n traject kreeg?</h2>
-      <p>
-        Zorgstart koppelt geriatrische evaluatie, zorgpaden en ontslagbeheer aan elkaar – zodat kwetsbare ouderen voorspelbaar én menselijk door het zorgsysteem bewegen.
+      <p class="hero-lead">
+        Van spoedopname naar veilig thuis – met geriatrische evaluatie, zorgpaden en ontslag via Zorgstart.
       </p>
-      <div class="cta-actions">
-        <a href="#" class="btn btn-primary">Plan een piloot in geriatrie</a>
-        <a href="#" class="btn btn-ghost">Bekijk voorbeelddata</a>
+
+      <div class="hero-meta" aria-label="Kernbegrippen">
+        <span class="chip">Comprehensive geriatrische evaluatie</span>
+        <span class="chip chip-soft">Beddenhuis- &amp; doorstroomjourney</span>
       </div>
     </div>
-  </section>
 
-</main>
+    <div class="hero-gradient" aria-hidden="true"></div>
+  </header>
 
-<footer class="footer">
-  <p>© Zorgstart – digitale orkestratie tussen ziekenhuis, geriatrisch dagziekenhuis en thuiszorg.</p>
-</footer>
+  <main id="content" class="page" role="main">
+
+    <!-- Rollen -->
+    <section class="roles-section" id="rollen" aria-labelledby="rollen-title">
+      <h2 id="rollen-title">Wie speelt welke rol?</h2>
+
+      <p class="section-intro">
+        Een multidisciplinair team bouwt, samen met de oudere en haar netwerk, aan één gedeeld zorgplan.
+        Zorgstart maakt dat plan zichtbaar en uitvoerbaar.
+      </p>
+
+      <div class="roles-grid" role="list">
+
+        <article class="role-card role-arts" role="listitem">
+          <h3>Geriater / specialist</h3>
+          <p>
+            Beoordeelt medische haalbaarheid, coördineert de geriatrische evaluatie en vertaalt bevindingen naar behandel- en zorgplanning.
+          </p>
+          <!-- refs: [web:56][web:61][web:83] -->
+        </article>
+
+        <article class="role-card role-verpleeg" role="listitem">
+          <h3>Verpleegkundige</h3>
+          <p>
+            Brengt verpleegkundige parameters en zorgbehoeften in kaart, bevraagt mantelzorg en signaleert geriatrische risico’s in Zorgstart.
+          </p>
+          <!-- refs: [web:61][web:64][web:70] -->
+        </article>
+
+        <article class="role-card role-social" role="listitem">
+          <h3>Sociaal werker</h3>
+          <p>
+            Regelt ondersteuning thuis, organiseert mantelzorg en bewaakt de sociale context rond de oudere.
+          </p>
+          <!-- refs: [web:61][web:64][web:79] -->
+        </article>
+
+        <article class="role-card role-para" role="listitem">
+          <h3>Ergotherapeut &amp; kinesist</h3>
+          <p>
+            Testen zelfstandigheid, mobiliteit en valrisico, en bepalen welke hulpmiddelen en revalidatie nodig zijn.
+          </p>
+          <!-- refs: [web:61][web:64][web:75] -->
+        </article>
+
+        <article class="role-card role-psy" role="listitem">
+          <h3>Psycholoog &amp; diëtist</h3>
+          <p>
+            Brengen mentaal welbevinden, geheugen en voeding/ondervoeding in kaart, als basis voor aangepaste zorg.
+          </p>
+          <!-- refs: [web:61][web:64][web:75] -->
+        </article>
+
+        <article class="role-card role-zorgstart" role="listitem">
+          <h3>Zorgstart</h3>
+          <p>
+            Digitale orkestratielaag die geriatrische domeinen, zorgpaden en ontslagplanning samenbrengt in één overzichtelijk traject.
+          </p>
+          <!-- refs: [web:56][web:61][web:80] -->
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Timeline -->
+    <section class="timeline-section" id="journey" aria-labelledby="journey-title">
+      <h2 id="journey-title">De visuele journey</h2>
+
+      <p class="timeline-intro">
+        Eén verhaal, meerdere mijlpalen: van opname, over geriatrische evaluatie, naar ontslag en nazorg.
+      </p>
+
+      <div class="timeline" role="list" aria-label="Geriatrische journey">
+
+        <!-- Dag 1 -->
+        <div class="timeline-item" role="listitem">
+          <div class="timeline-pill" aria-hidden="true">
+            <span class="pill-day">Dag 1</span>
+            <span class="pill-label">Opname &amp; early signal</span>
+          </div>
+
+          <article class="timeline-card">
+            <h3>Val thuis, opname via spoed</h3>
+
+            <p class="patient-line">
+              Mevrouw Janssens (82) valt thuis, breekt haar heup en wordt via spoed opgenomen. Ze woont alleen, heeft geheugenklachten en hulp van haar dochter op afstand.
+            </p>
+            <!-- refs: [web:61][web:79] -->
+
+            <div class="roles-list">
+
+              <div class="role-line">
+                <span class="role-tag role-verpleeg">Verpleegkundige</span>
+                <p>Registreert opname in het EPD en vult in Zorgstart een korte risico-screening in (valrisico, geheugenproblemen, woont alleen, beperkte mantelzorg).</p>
+                <!-- refs: [web:61][web:70] -->
+              </div>
+
+              <div class="role-line">
+                <span class="role-tag role-arts">Geriater / specialist</span>
+                <p>Beslist om, gezien leeftijd en kwetsbaarheid, een geriatrische evaluatie te vragen en een eerste verwachte ontslagwindow te noteren.</p>
+                <!-- refs: [web:56][web:61][web:83] -->
+              </div>
+
+              <div class="role-line">
+                <span class="role-tag role-zorgstart">Zorgstart</span>
+                <p>Labelt de patiënte als “hoog geriatrisch &amp; ontslagrisico” en zet haar automatisch op de radar van het geriatrisch team en sociale dienst.</p>
+                <!-- refs: [web:56][web:61] -->
+              </div>
+
+            </div>
+          </article>
+        </div>
+
+        <!-- Dag 2–3 -->
+        <div class="timeline-item" role="listitem">
+          <div class="timeline-pill" aria-hidden="true">
+            <span class="pill-day">Dag 2–3</span>
+            <span class="pill-label">Geriatrische evaluatie (CGA)</span>
+          </div>
+
+          <article class="timeline-card">
+            <h3>Een compleet beeld van kwetsbaarheid</h3>
+
+            <p class="patient-line">
+              In het geriatrisch dagziekenhuis of op de afdeling wordt een uitgebreide geriatrische evaluatie uitgevoerd: medisch, psychisch, functioneel en sociaal.
+            </p>
+            <!-- refs: [web:56][web:61][web:79] -->
+
+            <div class="roles-list">
+              <div class="role-line">
+                <span class="role-tag role-verpleeg">Verpleegkundige</span>
+                <p>Neemt verpleegkundige parameters af, bevraagt mantelzorg en thuissituatie en vult geriatrische syndromen in (incontinentie, pijn, slikproblemen, vermoeidheid…).</p>
+                <!-- refs: [web:61][web:70][web:79] -->
+              </div>
+
+              <div class="role-line">
+                <span class="role-tag role-para">Ergotherapeut &amp; kinesist</span>
+                <p>Testen ADL-zelfstandigheid, mobiliteit en valrisico, en brengen valgevaar en nood aan hulpmiddelen in kaart.</p>
+                <!-- refs: [web:61][web:64][web:75] -->
+              </div>
+
+              <div class="role-line">
+                <span class="role-tag role-psy">Psycholoog &amp; diëtist</span>
+                <p>Beoordelen geheugen en mentaal welbevinden, meten voedingstoestand en risico op ondervoeding of vermagering.</p>
+                <!-- refs: [web:61][web:64][web:75] -->
+              </div>
+
+              <div class="role-line">
+                <span class="role-tag role-social">Sociaal werker</span>
+                <p>Bekijkt sociale context, mantelzorgbelasting en beschikbaarheid van thuiszorg en vangnet.</p>
+                <!-- refs: [web:61][web:64][web:79] -->
+              </div>
+
+              <div class="role-line">
+                <span class="role-tag role-arts">Geriater</span>
+                <p>Integreert alle bevindingen in een samenvattend geriatrisch profiel en koppelt dit terug naar het team en de behandelende arts.</p>
+                <!-- refs: [web:56][web:61][web:83] -->
+              </div>
+
+              <div class="role-line">
+                <span class="role-tag role-zorgstart">Zorgstart</span>
+                <p>Verwerkt de geriatrische domeinen tot duidelijke probleemgebieden (mobiliteit, voeding, polyfarmacie, cognitie, continentiestoornissen, valrisico, mentaal welbevinden…).</p>
+                <!-- refs: [web:56][web:61][web:75] -->
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Dag 3–4 -->
+        <div class="timeline-item" role="listitem">
+          <div class="timeline-pill" aria-hidden="true">
+            <span class="pill-day">Dag 3–4</span>
+            <span class="pill-label">Zorgpaden gekozen</span>
+          </div>
+
+          <article class="timeline-card">
+            <h3>Van bevindingen naar zorgpaden</h3>
+
+            <p class="patient-line">
+              Op basis van de geriatrische evaluatie kiest het team passende zorgpaden en wordt het traject na ontslag al uitgetekend.
+            </p>
+            <!-- refs: [web:57][web:61][web:84] -->
+
+            <div class="roles-list">
+              <div class="role-line">
+                <span class="role-tag role-arts">Geriater / specialist</span>
+                <p>Activeert relevante zorgpaden in Zorgstart, zoals valrisico &amp; spierverlies, botontkalking, polyfarmacie-opvolging, dementiezorg of voedingsondersteuning.</p>
+                <!-- refs: [web:61][web:64][web:84] -->
+              </div>
+
+              <div class="role-line">
+                <span class="role-tag role-zorgstart">Zorgstart</span>
+                <p>Verbindt elk zorgpad met concrete acties na ontslag: dagziekenhuis geriatrie, geheugenkliniek, hartfalenpoli, wondzorg, thuisverpleging en revalidatie.</p>
+                <!-- refs: [web:57][web:61][web:62] -->
+              </div>
+
+              <div class="role-line">
+                <span class="role-tag role-social">Sociaal werker</span>
+                <p>Bekijkt, samen met patiënt en mantelzorger, wat haalbaar en wenselijk is en zorgt dat noodzakelijke ondersteuning tijdig wordt opgestart.</p>
+                <!-- refs: [web:61][web:62][web:79] -->
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Dag 4–6 -->
+        <div class="timeline-item" role="listitem">
+          <div class="timeline-pill" aria-hidden="true">
+            <span class="pill-day">Dag 4–6</span>
+            <span class="pill-label">Ontslag als uitvoeringsmoment</span>
+          </div>
+
+          <article class="timeline-card">
+            <h3>Het plan wordt concreet</h3>
+
+            <p class="patient-line">
+              Terwijl de medische behandeling verderloopt, wordt de thuissituatie stap voor stap voorbereid. Het ontslagmoment wordt een uitvoeringsmoment, geen startschot.
+            </p>
+            <!-- refs: [web:57][web:61][web:80] -->
+
+            <div class="roles-list">
+              <div class="role-line">
+                <span class="role-tag role-verpleeg">Verpleegkundige</span>
+                <p>Doorloopt een vaste ontslag-checklist in Zorgstart: wondzorg, medicatie, valpreventie, hulpmiddelen, wie te bellen bij problemen.</p>
+                <!-- refs: [web:61][web:64][web:70] -->
+              </div>
+
+              <div class="role-line">
+                <span class="role-tag role-social">Sociaal werker</span>
+                <p>Regelt thuiszorg, dagopvang, hulpmiddelen, vervoer, en stemt mantelzorg af; alles wordt zichtbaar in het Zorgstart-plan.</p>
+                <!-- refs: [web:61][web:62][web:79] -->
+              </div>
+
+              <div class="role-line">
+                <span class="role-tag role-zorgstart">Zorgstart</span>
+                <p>Genereert een professioneel overzicht (voor huisarts, thuisverpleegkundige, paramedici) én een begrijpelijke patiëntenversie in gewone taal.</p>
+                <!-- refs: [web:56][web:61][web:80] -->
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Ontslag -->
+        <div class="timeline-item" role="listitem">
+          <div class="timeline-pill" aria-hidden="true">
+            <span class="pill-day">Ontslag</span>
+            <span class="pill-label">Van bed naar zorgreis</span>
+          </div>
+
+          <article class="timeline-card">
+            <h3>Veilig naar huis, met een plan</h3>
+
+            <p class="patient-line">
+              Mevrouw Janssens verlaat het ziekenhuis niet met alleen een ontslagbrief, maar met een traject waarin geriatrische zorgpaden, thuiszorg en opvolging op elkaar afgestemd zijn.
+            </p>
+            <!-- refs: [web:57][web:61][web:83] -->
+
+            <div class="roles-list">
+              <div class="role-line">
+                <span class="role-tag role-para">Thuiszorg &amp; paramedici</span>
+                <p>Starten op basis van het gedeelde plan: wondzorg, valpreventie, kinesitherapie, voedingsadvies, cognitieve ondersteuning.</p>
+                <!-- refs: [web:57][web:61][web:62] -->
+              </div>
+
+              <div class="role-line">
+                <span class="role-tag role-arts">Huisarts &amp; geriatrisch dagziekenhuis</span>
+                <p>Zien welke zorgpaden lopen (bv. dementiezorg, hartfalen, kankerzorg, polyfarmacie) en nemen de medische regie na ontslag over.</p>
+                <!-- refs: [web:61][web:62][web:84] -->
+              </div>
+
+              <div class="role-line">
+                <span class="role-tag role-zorgstart">Zorgstart</span>
+                <p>Volgt op of zorg effectief opstart, signaleert vertragingen/no-shows en bouwt data op over doorstroom, ligduur en heropnames bij geriatrische patiënten.</p>
+                <!-- refs: [web:57][web:65][web:80] -->
+              </div>
+            </div>
+          </article>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section" id="cta" aria-labelledby="cta-title">
+      <div class="cta-card">
+        <h2 id="cta-title">Wat als elke geriatrische patiënt zo’n traject kreeg?</h2>
+        <p>
+          Zorgstart koppelt geriatrische evaluatie, zorgpaden en ontslagbeheer aan elkaar – zodat kwetsbare ouderen voorspelbaar én menselijk door het zorgsysteem bewegen.
+        </p>
+        <div class="cta-actions">
+          <a href="#journey" class="btn btn-primary">Plan een piloot in geriatrie</a>
+          <a href="#rollen" class="btn btn-ghost">Bekijk voorbeelddata</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <p>© Zorgstart – digitale orkestratie tussen ziekenhuis, geriatrisch dagziekenhuis en thuiszorg.</p>
+  </footer>
 
 </body>
 </html>
