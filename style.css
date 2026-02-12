@@ -1,18 +1,64 @@
+/* ============================================================
+   Zorgstart – Geriatrische patiëntjourney (ONE-FILE CSS)
+   - Alles in één geheel: variabelen + volledige styling
+   - Thema gestuurd via :root (incl. body gradient, buttons, timeline, pills)
+   ============================================================ */
+
 :root {
+  /* Base */
   --bg: #050816;
   --bg-alt: #0b1020;
   --card: #111729;
+
   --accent: #ff6b6b;
   --accent-soft: rgba(255, 107, 107, 0.16);
   --accent-2: #7c5cff;
   --accent-2-soft: rgba(124, 92, 255, 0.16);
+
   --text-main: #f9fbff;
   --text-muted: #9aa4c6;
+
   --border-subtle: rgba(255, 255, 255, 0.06);
+
   --radius-lg: 18px;
   --radius-pill: 999px;
+
   --shadow-soft: 0 18px 55px rgba(5, 8, 22, 0.75);
-  --timeline-line: linear-gradient(180deg, #ff6b6b, #7c5cff);
+
+  /* Timeline line */
+  --timeline-line: linear-gradient(180deg, var(--accent), var(--accent-2));
+
+  /* ===== Added “theme controls” (so nothing is hardcoded) ===== */
+
+  /* Page background gradient stops */
+  --bg-grad-1: #1a1f3b;
+  --bg-grad-2: var(--bg);
+  --bg-grad-3: #02030a;
+
+  /* Primary button gradient (accent -> strong) */
+  --accent-strong: #ff8f70;
+
+  /* Timeline card gradient */
+  --timeline-card-1: rgba(255, 255, 255, 0.035);
+  --timeline-card-2: rgba(7, 12, 33, 0.98);
+
+  /* Timeline dot */
+  --timeline-dot-border: var(--bg);
+  --timeline-dot-1: #ffffff;
+  --timeline-dot-2: #ffd6d6;
+  --accent-glow: rgba(255, 107, 107, 0.35);
+
+  /* Day pill */
+  --pill-bg: var(--bg);
+  --pill-border: rgba(255, 255, 255, 0.3);
+
+  /* Optional: Role colors (easy to theme) */
+  --role-arts: #ffb86c;
+  --role-verpleeg: #2ed573;
+  --role-social: #1e90ff;
+  --role-para: #ffa502;
+  --role-psy: #ff9ff3;
+  --role-zorgstart: var(--accent);
 }
 
 *,
@@ -21,7 +67,8 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
 }
@@ -29,12 +76,19 @@ html, body {
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
     "Segoe UI", sans-serif;
-  background: radial-gradient(circle at top left, #1a1f3b 0, #050816 45%, #02030a 100%);
+  background: radial-gradient(
+    circle at top left,
+    var(--bg-grad-1) 0,
+    var(--bg-grad-2) 45%,
+    var(--bg-grad-3) 100%
+  );
   color: var(--text-main);
   -webkit-font-smoothing: antialiased;
 }
 
-/* Hero */
+/* =========================
+   Hero
+   ========================= */
 
 .hero {
   position: relative;
@@ -100,14 +154,23 @@ body {
 .hero-gradient {
   position: absolute;
   inset: 0;
-  background:
-    radial-gradient(circle at top left, rgba(252, 92, 125, 0.25), transparent 55%),
-    radial-gradient(circle at top right, rgba(124, 92, 255, 0.18), transparent 60%);
+  background: radial-gradient(
+      circle at top left,
+      rgba(252, 92, 125, 0.25),
+      transparent 55%
+    ),
+    radial-gradient(
+      circle at top right,
+      rgba(124, 92, 255, 0.18),
+      transparent 60%
+    );
   opacity: 0.8;
   pointer-events: none;
 }
 
-/* Page */
+/* =========================
+   Page
+   ========================= */
 
 .page {
   max-width: 1100px;
@@ -115,7 +178,9 @@ body {
   padding: 0 20px 40px;
 }
 
-/* Roles */
+/* =========================
+   Roles
+   ========================= */
 
 .roles-section {
   margin-top: 12px;
@@ -141,8 +206,12 @@ body {
 }
 
 .role-card {
-  background: radial-gradient(circle at top left, rgba(255, 255, 255, 0.06), transparent 55%),
-              var(--bg-alt);
+  background: radial-gradient(
+        circle at top left,
+        rgba(255, 255, 255, 0.06),
+        transparent 55%
+      ),
+    var(--bg-alt);
   border-radius: var(--radius-lg);
   padding: 16px 18px;
   border: 1px solid var(--border-subtle);
@@ -160,14 +229,29 @@ body {
   color: var(--text-muted);
 }
 
-.role-arts { border-left: 3px solid #ffb86c; }
-.role-verpleeg { border-left: 3px solid #2ed573; }
-.role-social { border-left: 3px solid #1e90ff; }
-.role-para { border-left: 3px solid #ffa502; }
-.role-psy { border-left: 3px solid #ff9ff3; }
-.role-zorgstart { border-left: 3px solid #ff6b6b; }
+/* Role borders (variable-driven) */
+.role-arts {
+  border-left: 3px solid var(--role-arts);
+}
+.role-verpleeg {
+  border-left: 3px solid var(--role-verpleeg);
+}
+.role-social {
+  border-left: 3px solid var(--role-social);
+}
+.role-para {
+  border-left: 3px solid var(--role-para);
+}
+.role-psy {
+  border-left: 3px solid var(--role-psy);
+}
+.role-zorgstart {
+  border-left: 3px solid var(--role-zorgstart);
+}
 
-/* Timeline */
+/* =========================
+   Timeline
+   ========================= */
 
 .timeline-section {
   margin-top: 36px;
@@ -179,14 +263,14 @@ body {
   font-size: 14px;
 }
 
-/* Container voor lijn + items */
+/* Container for line + items */
 .timeline {
   position: relative;
   padding-left: 60px;
   margin-left: 10px;
 }
 
-/* Verticale lijn */
+/* Vertical line */
 .timeline::before {
   content: "";
   position: absolute;
@@ -199,13 +283,13 @@ body {
   opacity: 0.9;
 }
 
-/* Eén blok in de journey */
+/* One block */
 .timeline-item {
   position: relative;
   margin-bottom: 40px;
 }
 
-/* Dot + dag-label */
+/* Dot + day label holder */
 .timeline-pill {
   position: absolute;
   left: 24px;
@@ -216,31 +300,35 @@ body {
   align-items: center;
 }
 
-/* De dot zelf */
+/* Dot */
 .timeline-pill::before {
   content: "";
   width: 16px;
   height: 16px;
   border-radius: 999px;
-  border: 3px solid #050816;
-  background: radial-gradient(circle at 30% 30%, #ffffff, #ffd6d6);
-  box-shadow: 0 0 0 4px rgba(255, 107, 107, 0.35);
+  border: 3px solid var(--timeline-dot-border);
+  background: radial-gradient(
+    circle at 30% 30%,
+    var(--timeline-dot-1),
+    var(--timeline-dot-2)
+  );
+  box-shadow: 0 0 0 4px var(--accent-glow);
   margin-bottom: 6px;
 }
 
-/* Dag-badge */
+/* Day badge */
 .pill-day {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   padding: 4px 10px;
   border-radius: var(--radius-pill);
-  background: #050816;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: var(--pill-bg);
+  border: 1px solid var(--pill-border);
   font-size: 12px;
 }
 
-/* Label onder dag */
+/* Label under day */
 .pill-label {
   margin-top: 6px;
   padding: 4px 10px;
@@ -253,10 +341,14 @@ body {
   text-align: center;
 }
 
-/* Het kaartje rechts van de lijn */
+/* Card right of the line */
 .timeline-card {
   margin-left: 90px;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.035), rgba(7, 12, 33, 0.98));
+  background: linear-gradient(
+    135deg,
+    var(--timeline-card-1),
+    var(--timeline-card-2)
+  );
   border-radius: 20px;
   padding: 16px 18px 18px;
   border: 1px solid var(--border-subtle);
@@ -274,7 +366,7 @@ body {
   color: var(--text-muted);
 }
 
-/* Per rol binnen een kaart */
+/* Per role inside a card */
 .roles-list {
   display: flex;
   flex-direction: column;
@@ -288,7 +380,7 @@ body {
   align-items: flex-start;
 }
 
-/* Badge per rol */
+/* Role badge */
 .role-tag {
   display: inline-flex;
   align-items: center;
@@ -308,46 +400,71 @@ body {
   color: #e0e4ff;
 }
 
+/* Role tag accents */
 .role-tag.role-arts {
-  border-color: rgba(255, 184, 108, 0.8);
+  border-color: color-mix(in oklab, var(--role-arts) 80%, transparent);
   color: #ffd8a2;
 }
 
 .role-tag.role-verpleeg {
-  border-color: rgba(46, 213, 115, 0.8);
+  border-color: color-mix(in oklab, var(--role-verpleeg) 80%, transparent);
   color: #b9f6cf;
 }
 
 .role-tag.role-social {
-  border-color: rgba(30, 144, 255, 0.8);
+  border-color: color-mix(in oklab, var(--role-social) 80%, transparent);
   color: #c5e2ff;
 }
 
 .role-tag.role-para {
-  border-color: rgba(255, 215, 0, 0.8);
+  border-color: color-mix(in oklab, var(--role-para) 80%, transparent);
   color: #fff3b0;
 }
 
 .role-tag.role-psy {
-  border-color: rgba(255, 159, 243, 0.9);
+  border-color: color-mix(in oklab, var(--role-psy) 80%, transparent);
   color: #ffd6fb;
 }
 
 .role-tag.role-zorgstart {
-  border-color: rgba(255, 107, 107, 0.8);
+  border-color: color-mix(in oklab, var(--role-zorgstart) 80%, transparent);
   color: #ffd6d6;
 }
 
-/* CTA */
+/* Fallback for browsers without color-mix() */
+@supports not (color: color-mix(in oklab, white, black)) {
+  .role-tag.role-arts {
+    border-color: rgba(255, 184, 108, 0.8);
+  }
+  .role-tag.role-verpleeg {
+    border-color: rgba(46, 213, 115, 0.8);
+  }
+  .role-tag.role-social {
+    border-color: rgba(30, 144, 255, 0.8);
+  }
+  .role-tag.role-para {
+    border-color: rgba(255, 215, 0, 0.8);
+  }
+  .role-tag.role-psy {
+    border-color: rgba(255, 159, 243, 0.9);
+  }
+  .role-tag.role-zorgstart {
+    border-color: rgba(255, 107, 107, 0.8);
+  }
+}
+
+/* =========================
+   CTA
+   ========================= */
 
 .cta-section {
   margin-top: 40px;
 }
 
 .cta-card {
-  background: radial-gradient(circle at top left, rgba(255, 107, 107, 0.16), transparent 55%),
-              radial-gradient(circle at top right, rgba(124, 92, 255, 0.16), transparent 60%),
-              var(--bg-alt);
+  background: radial-gradient(circle at top left, var(--accent-soft), transparent 55%),
+    radial-gradient(circle at top right, var(--accent-2-soft), transparent 60%),
+    var(--bg-alt);
   border-radius: 24px;
   padding: 22px 22px 20px;
   border: 1px solid var(--border-subtle);
@@ -381,11 +498,12 @@ body {
   font-size: 14px;
   text-decoration: none;
   cursor: pointer;
-  transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease;
+  transition: transform 0.12s ease, box-shadow 0.12s ease,
+    background 0.12s ease;
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, #ff6b6b, #ff8f70);
+  background: linear-gradient(135deg, var(--accent), var(--accent-strong));
   color: #1b0a0a;
   box-shadow: 0 12px 35px rgba(255, 107, 107, 0.35);
 }
@@ -405,7 +523,9 @@ body {
   background: rgba(10, 16, 44, 0.95);
 }
 
-/* Footer */
+/* =========================
+   Footer
+   ========================= */
 
 .footer {
   border-top: 1px solid rgba(255, 255, 255, 0.05);
@@ -415,7 +535,9 @@ body {
   color: var(--text-muted);
 }
 
-/* Responsive */
+/* =========================
+   Responsive
+   ========================= */
 
 @media (max-width: 720px) {
   .timeline {
